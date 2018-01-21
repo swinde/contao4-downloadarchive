@@ -14,7 +14,7 @@
 /**
  * Run in a custom namespace, so the class can be replaced
  */
-namespace FelixPfeiffer\Downloadarchive;
+namespace Swinde\Downloadarchive;
 
 use Patchwork\Utf8;
 
@@ -68,7 +68,7 @@ class ModuleDownloadarchive extends \Module
 			$title = array();
 			foreach($this->arrDownloadarchives as $archive)
 			{
-				$objDownloadarchivee = \FelixPfeiffer\Downloadarchive\DownloadarchiveModel::findByPk($archive);
+				$objDownloadarchivee = \Swinde\Downloadarchive\DownloadarchiveModel::findByPk($archive);
 			
 				$title[] = $objDownloadarchivee->title;
 			}
@@ -92,7 +92,7 @@ class ModuleDownloadarchive extends \Module
         foreach($this->arrDownloadarchives as $archive)
         {
 
-            $objFiles = \FelixPfeiffer\Downloadarchive\DownloadarchiveitemsModel::findPublishedByPid($archive);
+            $objFiles = \Swinde\Downloadarchive\DownloadarchiveitemsModel::findPublishedByPid($archive);
 
             if($objFiles === null) continue;
 
@@ -164,7 +164,7 @@ class ModuleDownloadarchive extends \Module
 		foreach($this->arrDownloadfiles as $k=>$archive)
 		{
 
-			$objArchive = \FelixPfeiffer\Downloadarchive\DownloadarchiveModel::findByPk($k);
+			$objArchive = \Swinde\Downloadarchive\DownloadarchiveModel::findByPk($k);
 
             $strLightboxId = 'lightbox[' . substr(md5($objArchive->title . '_' . $objArchive->id), 0, 6) . ']';
 
@@ -317,7 +317,7 @@ class ModuleDownloadarchive extends \Module
 		$arrNew = array();
 		foreach($this->arrDownloadarchives as $archive)
 		{
-			$objDownloadarchive = \FelixPfeiffer\Downloadarchive\DownloadarchiveModel::findPublishedById($archive);
+			$objDownloadarchive = \Swinde\Downloadarchive\DownloadarchiveModel::findPublishedById($archive);
 			
 			if($objDownloadarchive !== null) $arrNew[] = $objDownloadarchive->id;
 			

@@ -7,7 +7,7 @@
  * @see	       https://github.com/markocupic/gallery-creator-bundle
  *
  */
-namespace FelixPfeiffer\Downloadarchive\ContaoManager;
+namespace Swinde\Downloadarchive\ContaoManager;
 
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
@@ -26,7 +26,7 @@ class Plugin implements BundlePluginInterface
     public function getBundles(ParserInterface $parser)
     {
         return [
-            BundleConfig::create('FelixPfeiffer\Downloadarchive\FelixPfeifferDownloadarchive')
+            BundleConfig::create('Swinde\Downloadarchive\SwindeDownloadarchive')
                 ->setLoadAfter(['Contao\CoreBundle\ContaoCoreBundle'])
                 ->setReplace(['downloadarchive']),
         ];

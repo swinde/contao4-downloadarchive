@@ -381,7 +381,7 @@ class tl_downloadarchive extends Backend
 	public function loadDirectory(DC_Table $dc)
 	{
 
-        $objItems = \FelixPfeiffer\Downloadarchive\DownloadarchiveitemsModel::findPublishedByPid($dc->id);
+        $objItems = \Swinde\Downloadarchive\DownloadarchiveitemsModel::findPublishedByPid($dc->id);
 
         if(($objItems !== null && $objItems->numRows > 0) || !$dc->activeRecord->loadDirectory )
         {

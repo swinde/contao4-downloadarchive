@@ -44,7 +44,7 @@ array_insert($GLOBALS['FE_MOD'], 4, array
 (
 	'application' => array
 	(
-		'downloadarchive'   => 'FelixPfeiffer\Downloadarchive\ModuleDownloadarchive'
+		'downloadarchive'   => 'Swinde\Downloadarchive\ModuleDownloadarchive'
 	)
 ));
 
@@ -52,9 +52,9 @@ array_insert($GLOBALS['FE_MOD'], 4, array
  * Content Element
  */
 array_insert($GLOBALS['TL_CTE']['files'],2,array (
-    'downloadarchive' => 'FelixPfeiffer\Downloadarchive\ContentDownloadarchive',
+    'downloadarchive' => 'Swinde\Downloadarchive\ContentDownloadarchive',
 ));
-//$GLOBALS['TL_CTE']['files']['downloadarchive'] = 'FelixPfeiffer\Downloadarchive\ContentDownloadarchive';
+//$GLOBALS['TL_CTE']['files']['downloadarchive'] = 'Swinde\Downloadarchive\ContentDownloadarchive';
 
 /**
  * Add permissions
@@ -66,6 +66,6 @@ $GLOBALS['TL_PERMISSIONS'][] = 'downloadarchivep';
 /**
  * Register the model
  */
-$GLOBALS['TL_MODELS']['tl_downloadarchive'] = 'FelixPfeiffer\Downloadarchive\DownloadarchiveModel';
-$GLOBALS['TL_MODELS']['tl_downloadarchiveitems'] = 'FelixPfeiffer\Downloadarchive\DownloadarchiveitemsModel';
+$GLOBALS['TL_MODELS']['tl_downloadarchive'] = 'Swinde\Downloadarchive\DownloadarchiveModel';
+$GLOBALS['TL_MODELS']['tl_downloadarchiveitems'] = 'Swinde\Downloadarchive\DownloadarchiveitemsModel';
 ?>
