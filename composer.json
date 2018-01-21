@@ -1,0 +1,45 @@
+{
+	"name":"felixpfeiffer/contao-downloadarchive",
+	"description":"Define downloadarchives with permission for users to download single files.",
+	"keywords":["download","archive","permission"],
+	"type":"contao-bundel",
+	"homepage":"http://www.felixpfeiffer.com/",
+	"license":"LGPL-3.0+",
+	"authors":[
+		{
+			"name":"Felix Pfeiffer",
+			"homepage":"http://www.felixpfeiffer.com/",
+			"role":"Developer"
+		}
+	],
+	"support":{
+		"issues":"https://github.com/felixpfeiffer/contao-downloadarchive/issues",
+		"source":"https://github.com/felixpfeiffer/contao-downloadarchive"
+	},
+	"require": {
+		"php": "^7.1",
+		"contao/core-bundle": "^4.4"
+	},
+	"require-dev": {
+        	"contao/manager-plugin": "^2.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"FelixPfeiffer\\Downloadarchive\\": "src/"
+		},
+		"classmap": [
+			"src/Resources/contao"
+		],
+		"exclude-from-classmap": [
+			"src/Resources/contao/config",
+			"src/Resources/contao/dca",
+			"src/Resources/contao/languages",
+			"src/Resources/contao/templates"
+		]
+	},
+	"extra": {
+		"contao-manager-plugin": "FelixPfeiffer\\Downloadarchive\\ContaoManager\\Plugin"
+	},
+	"minimum-stability": "beta",
+	"prefer-stable": true
+}
