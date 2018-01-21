@@ -22,7 +22,7 @@
 		"source":"https://github.com/fswinde/contao4-downloadarchive"
 	},
 	"require": {
-		"php": "^7.1",
+		"php": "^5.6",
 		"contao/core-bundle": "^4.4"
 	},
 	"require-dev": {
