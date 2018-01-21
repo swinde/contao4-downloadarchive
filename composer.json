@@ -1,8 +1,8 @@
 {
-	"name":"swinde/contao4-downloadarchive",
+	"name":"swinde/contao4-downloadarchiv",
 	"description":"Define downloadarchives with permission for users to download single files.",
 	"keywords":["download","archive","permission"],
-	"type":"contao-bundel",
+	"type":"contao-bundle",
 	"homepage":"http://internetservice.winde-ganzig.de/",
 	"license":"LGPL-3.0-or-later",
 	"authors":[
