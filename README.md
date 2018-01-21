@@ -1,7 +1,7 @@
-ContaoDownloadarchive
+Contao 4 Downloadarchive
 =====================
 
-Die Erweiterung downloadarchive bietet die Möglichkeit, Dateien aus dem Dateisystem in verschiedenen Archiven zu organisieren.
+Die Erweiterung contao4-downloadarchive bietet die Möglichkeit, Dateien aus dem Dateisystem in verschiedenen Archiven zu organisieren.
 
 Jedes Archiv kann seine eigene Sichtbarkeit für Gäste und/oder registrierte Mitglieder erhalten.
 
