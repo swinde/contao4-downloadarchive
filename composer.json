@@ -30,7 +30,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"FelixPfeiffer\\Downloadarchive\\": "src/"
+			"Swinde\\Downloadarchive\\": "src/"
 		},
 		"classmap": [
 			"src/Resources/contao"
@@ -43,7 +43,7 @@
 		]
 	},
 	"extra": {
-		"contao-manager-plugin": "FelixPfeiffer\\Downloadarchive\\ContaoManager\\Plugin"
+		"contao-manager-plugin": "Swinde\\Downloadarchive\\ContaoManager\\Plugin"
 	},
 	"minimum-stability": "beta",
 	"prefer-stable": true
