@@ -1,6 +1,6 @@
 {
 	"name":"swinde/contao4-downloadarchive",
-	"description":"Define downloadarchives with permission for users to download single files.",
+	"description":"Es werden Downloadarchive definiert, die es Benutzern erlauben, einzelne Dateien herunterzuladen.",
 	"keywords":["download","archive","permission"],
 	"type":"contao-bundle",
 	"homepage":"http://internetservice.winde-ganzig.de/",
