@@ -1,5 +1,5 @@
 {
-	"name":"swinde/contao4-downloadarchiv",
+	"name":"swinde/contao4-downloadarchive",
 	"description":"Define downloadarchives with permission for users to download single files.",
 	"keywords":["download","archive","permission"],
 	"type":"contao-bundle",
