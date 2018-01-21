@@ -1,20 +1,25 @@
 {
-	"name":"felixpfeiffer/contao-downloadarchive",
+	"name":"swinde/contao4-downloadarchive",
 	"description":"Define downloadarchives with permission for users to download single files.",
 	"keywords":["download","archive","permission"],
 	"type":"contao-bundel",
-	"homepage":"http://www.felixpfeiffer.com/",
+	"homepage":"http://internetservice.winde-ganzig.de/",
 	"license":"LGPL-3.0+",
 	"authors":[
 		{
 			"name":"Felix Pfeiffer",
 			"homepage":"http://www.felixpfeiffer.com/",
 			"role":"Developer"
+		},
+		{
+			"name":"Steffen Winde",
+			"homepage":"http://internetservice.winde-ganzig.de/",
+			"role":"Developer"
 		}
 	],
 	"support":{
-		"issues":"https://github.com/felixpfeiffer/contao-downloadarchive/issues",
-		"source":"https://github.com/felixpfeiffer/contao-downloadarchive"
+		"issues":"https://github.com/swinde/contao4-downloadarchive/issues",
+		"source":"https://github.com/fswinde/contao4-downloadarchive"
 	},
 	"require": {
 		"php": "^7.1",
