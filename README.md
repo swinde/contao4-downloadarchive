@@ -7,4 +7,4 @@ Jedes Archiv kann seine eigene Sichtbarkeit für Gäste und/oder registrierte Mi
 
 Sie können für jede Datei eines Archivs einen Titel, eine Beschreibung und ein Vorschaubild hinzufügen und festlegen, welche Aktion verwendet werden soll, wenn ein Bild angeklickt wird.
 
-Dieses Repository ist eine Weiterentwicklung von felixpfeiffer/contao-downloadarchive. 
+Dieses Repository ist eine Weiterentwicklung von <a href="https://github.com/felixpfeiffer/contao-downloadarchive">felixpfeiffer/contao-downloadarchive</a>. 
