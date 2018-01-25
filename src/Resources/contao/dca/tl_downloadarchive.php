@@ -390,11 +390,12 @@ class tl_downloadarchive extends Backend
 
         $objFolder = \FilesModel::findByUuid($dc->activeRecord->dirSRC);
 
-        if($objFolder->type == 'file') return;
+		if($objFolder->type == 'file') 
+			return;
 
         $this->extension = $dc->activeRecord->extension != '' ? explode(',',$dc->activeRecord->extension) : false;
 
-        $arrFiles = $this->getFiles($objFolder->uuid,$dc->activeRecords->loadSubdir);
+		$arrFiles = $this->getFiles($objFolder->uuid, $dc->activeRecord->loadSubdir);
 
 
         if(!$arrFiles) return;
@@ -418,7 +419,7 @@ class tl_downloadarchive extends Backend
                 'tstamp'	=> time(),
                 'title'		=> $title,
                 'singleSRC'	=> $file->uuid,
-                'published' =>$dc->activeRecord->publishAll
+                'published' => $dc->activeRecord->publishAll
             );
 
             \Database::getInstance()->prepare("INSERT INTO tl_downloadarchiveitems %s")
@@ -439,30 +440,37 @@ class tl_downloadarchive extends Backend
             return false;
         }
 
-        while ($objFiles->next())
+		while ($objFiles->next())
         {
 
-            // Skip subfolders
+            // Do not add the folder to the result
             if ($objFiles->type == 'folder')
             {
-                #echo $objFiles->path . "<br>";
-                $varSubfiles = $this->getFiles($objFiles->uuid, $loadSubdir);
+				// Check if we have to scan the subdir
+				if ($loadSubdir)
+				{
+					#echo $objFiles->path . "<br>";
+					$varSubfiles = $this->getFiles($objFiles->uuid, $loadSubdir);
 
-                if($varSubfiles)
-                {
-                    $arrFiles = array_merge($arrFiles,$varSubfiles);
-                }
+					if($varSubfiles)
+					{
+						$arrFiles = array_merge($arrFiles, $varSubfiles);
+					}
+				}
 
                 continue;
             }
 
-            if($this->extension && !in_array($objFiles->extension, $this->extension)) continue;
+			if($this->extension && !in_array($objFiles->extension, $this->extension)) 
+				continue;
 
-            $arrFiles[] = $objFiles;
+            $arrFiles[] = $objFiles->current();
         }
 
-        if(is_array($arrFiles) && count($arrFiles) > 0) return $arrFiles;
-        else return false;
+		if(is_array($arrFiles) && count($arrFiles) > 0) 
+			return $arrFiles;
+		else 
+			return false;
 
 	}
 	

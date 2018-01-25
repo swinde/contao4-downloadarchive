@@ -15,7 +15,13 @@
 			"name":"Steffen Winde",
 			"homepage":"http://internetservice.winde-ganzig.de/",
 			"role":"Developer"
+		},
+		{
+			"name":"Philipp Winkel",
+			"homepage": "https://www.winkelweb.de/",
+			"role":"Developer"
 		}
+
 	],
 	"support":{
 		"issues":"https://github.com/swinde/contao4-downloadarchive/issues",
