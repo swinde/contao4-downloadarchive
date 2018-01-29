@@ -19,7 +19,7 @@ namespace Swinde\Downloadarchive;
 
 
 /**
- * Reads and writes news
+ * Reads and writes downloadarchiveitems
  *
  * @package   Models
  * @copyright  Felix Pfeiffer 2008 - 2014
@@ -54,5 +54,23 @@ class DownloadarchiveitemsModel extends \Model
         }
 
         return static::findBy($arrColumns, $intPid, $arrOptions);
+    }
+
+    /**
+     * Find file by their parent IDs and their uuid
+     *
+     * @param integer $intPid      The archive ID
+     * @param string  $strUuid     The file UUID
+     * @param array   $arrOptions An optional options array
+     *
+     * @return \Model|null The model or null if there is no published page
+     */
+    
+    public static function findByPidAndUuid($intPid, $strUuid, array $arrOptions=array())
+    {
+        $t = static::$strTable;
+        $arrColumns = array("$t.pid = $intPid", "$t.singleSRC = '$strUuid'");
+
+        return static::findBy($arrColumns, null, $arrOptions);
     }
 }
