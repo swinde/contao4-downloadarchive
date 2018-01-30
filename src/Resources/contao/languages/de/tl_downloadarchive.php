@@ -18,7 +18,7 @@
 $GLOBALS['TL_LANG']['tl_downloadarchive']['title'] = array('Name', 'Geben Sie einen Namen für das Download-Archiv an. Dieser wird lediglich für die Anzeige im Backend verwendet.');
 $GLOBALS['TL_LANG']['tl_downloadarchive']['showMeta']     = array('Metadaten Anzeigen?', 'Sollen Upload-Datum und Größe der Dateien angezeigt werden?');
 $GLOBALS['TL_LANG']['tl_downloadarchive']['hideDate']     = array('Datum ausblenden', 'Die Anzeige des Upload-Datums ausblenden.');
-$GLOBALS['TL_LANG']['tl_downloadarchive']['loadDirectory'] = array('Verzeichnis einlesen?', 'Sie können alle Dateien eines Verzeichnisses automatisch in das Downloadarchiv einlesen lassen. Dies geht nur, solange noch keine Dateien in dem Downloadarchiv gespeichert sind.');
+$GLOBALS['TL_LANG']['tl_downloadarchive']['loadDirectory'] = array('Verzeichnis einlesen?', 'Sie können alle Dateien eines Verzeichnisses automatisch in das Downloadarchiv einlesen lassen. Ein erneutest einlesen des Verzeichnisses, überschreibt vorhandene Dateien, Title, Bilder und Beschreibungen nicht! ');
 $GLOBALS['TL_LANG']['tl_downloadarchive']['loadSubdir'] = array('Unterverzeichnisse durchsuchen', 'Sollen auch alle Untervezeichnisse nach Dateien durchsucht werden?');
 $GLOBALS['TL_LANG']['tl_downloadarchive']['dirSRC'] = array('Verzeichnis auswählen', 'Wählen Sie das Verzeichnis aus, welches Sie durchsuchen möchten.');
 $GLOBALS['TL_LANG']['tl_downloadarchive']['prefix'] = array('Namens-Prefix verwenden', 'Sie können die Titel der Dateien automatisch generieren lassen. Der Name setzt sich dann aus dem Prefix und einer steigenden Zahl zusammen. (Beispiel: "Unsere Produkte 0001")<br />Der Dateiname wird dabei NICHT geändert.');
