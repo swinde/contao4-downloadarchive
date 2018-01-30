@@ -400,10 +400,15 @@ class tl_downloadarchive extends Backend
 
         if(!$arrFiles) return;
 
-        $i=0;
+        $i = 0;
 
         foreach($arrFiles as $file)
         {
+			// Check if file exists in downloadarchive
+			$objDownloadarchiveItem = \Swinde\Downloadarchive\DownloadarchiveitemsModel::findByPidAndUuid($dc->activeRecord->id, $arrFiles[$i]->uuid);
+			if($objDownloadarchiveItem !== null)
+				continue;
+
             $objFile = new \File($file->path, true);
 
             $title = specialchars($objFile->basename);
