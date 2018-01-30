@@ -227,7 +227,7 @@ $GLOBALS['TL_DCA']['tl_downloadarchiveitems'] = array
 			'label'                   => &$GLOBALS['TL_LANG']['tl_content']['alt'],
 			'exclude'                 => true,
 			'inputType'               => 'text',
-			'eval'                    => array('mandatory'=>true, 'rgxp'=>'extnd', 'maxlength'=>255, 'tl_class'=>''),
+			'eval'                    => array('mandatory'=>false, 'rgxp'=>'extnd', 'maxlength'=>255, 'tl_class'=>''),
             'sql'                     => "varchar(255) NOT NULL default ''"
 		),
 		'caption' => array
