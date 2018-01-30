@@ -149,21 +149,21 @@ $GLOBALS['TL_DCA']['tl_downloadarchive'] = array
             'eval'                    => array('submitOnChange'=>true),
             'sql'                     => "char(1) NOT NULL default ''"
         ),
-        'loadSubdir' => array
-        (
-            'label'                   => &$GLOBALS['TL_LANG']['tl_downloadarchive']['loadSubdir'],
-            'exclude'                 => true,
-            'inputType'               => 'checkbox',
-            'eval'                    => array('tl_class'=>'clr w50'),
-            'sql'                     => "char(1) NOT NULL default ''"
-        ),
         'dirSRC' => array
         (
             'label'                   => &$GLOBALS['TL_LANG']['tl_downloadarchive']['dirSRC'],
             'exclude'                 => true,
             'inputType'               => 'fileTree',
-            'eval'                    => array('files'=>false, 'fieldType'=>'radio','tl_class'=>'w50'),
+            'eval'                    => array('files'=>false, 'fieldType'=>'radio','tl_class'=>'long'),
             'sql'                     => "binary(16) NULL"
+        ),
+        'loadSubdir' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['tl_downloadarchive']['loadSubdir'],
+            'exclude'                 => true,
+            'inputType'               => 'checkbox',
+            'eval'                    => array('tl_class'=>'m12'),
+            'sql'                     => "char(1) NOT NULL default ''"
         ),
         'prefix' => array
         (
