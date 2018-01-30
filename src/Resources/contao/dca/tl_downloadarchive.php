@@ -162,7 +162,7 @@ $GLOBALS['TL_DCA']['tl_downloadarchive'] = array
             'label'                   => &$GLOBALS['TL_LANG']['tl_downloadarchive']['dirSRC'],
             'exclude'                 => true,
             'inputType'               => 'fileTree',
-            'eval'                    => array('files'=>false, 'fieldType'=>'radio','tl_class'=>'w50'),
+            'eval'                    => array('files'=>false, 'fieldType'=>'radio','tl_class'=>''),
             'sql'                     => "binary(16) NULL"
         ),
         'prefix' => array
