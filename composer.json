@@ -49,8 +49,9 @@
 		]
 	},
 	"extra": {
-		"contao-manager-plugin": "Swinde\\Downloadarchive\\ContaoManager\\Plugin"
-	},
-	"minimum-stability": "beta",
-	"prefer-stable": true
+		"contao-manager-plugin": "Swinde\\Downloadarchive\\ContaoManager\\Plugin",
+		"branch-alias": {
+			"dev-master": "2.0.x-dev"
+		}
+	}
 }
