@@ -11,4 +11,4 @@ Dieses Repository ist eine Weiterentwicklung von <a href="https://github.com/fel
 
 ## Installation über Composer
 
-composer require swinde/contao4-downloadarchive dev-master
+composer require swinde/contao4-downloadarchive
