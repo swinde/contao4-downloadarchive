@@ -16,6 +16,7 @@
  */
 namespace Swinde\Downloadarchive;
 
+use Contao\Pagination;
 use Patchwork\Utf8;
 
 /**
