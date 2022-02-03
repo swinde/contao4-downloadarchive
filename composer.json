@@ -28,8 +28,8 @@
 		"source":"https://github.com/swinde/contao4-downloadarchive"
 	},
 	"require": {
-      "php": "^5.6|^7.1",
-		"contao/core-bundle": "~4.4"
+      "php": "^7.4|^8.1",
+		"contao/core-bundle": "~4.9"
 	},
 	"require-dev": {
         	"contao/manager-plugin": "^2.0"
