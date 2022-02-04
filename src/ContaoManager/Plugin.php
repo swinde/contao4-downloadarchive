@@ -9,9 +9,11 @@
  */
 namespace Swinde\Downloadarchive\ContaoManager;
 
-use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
+use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
+use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
+use Swinde\Downloadarchive\SwindeDownloadarchive;
 
 /**
  * Plugin for the Contao Manager.
@@ -26,9 +28,9 @@ class Plugin implements BundlePluginInterface
     public function getBundles(ParserInterface $parser)
     {
         return [
-            BundleConfig::create('Swinde\Downloadarchive\SwindeDownloadarchive')
-                ->setLoadAfter(['Contao\CoreBundle\ContaoCoreBundle'])
-                ->setReplace(['downloadarchive']),
+            BundleConfig::create(SwindeDownloadarchive::class)
+                ->setLoadAfter([ContaoCoreBundle::class]),
+
         ];
     }
 }
