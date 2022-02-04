@@ -43,12 +43,22 @@
 		"phpunit/phpunit": "^8.4",
 		"symfony/phpunit-bridge": "^4.4 || ^5.1"
 	},
+	"autoload": {
+		"psr-4": {
+			"Swinde\\Downloadarchive\\": "src/"
+		}
+	},
 	"autoload-dev": {
 		"psr-4": {
-			"Contao\\SkeletonBundle\\Tests\\": "tests/"
+			"Swinde\\Downloadarchive\\Tests\\": "tests/"
 		}
 	},
 	"extra": {
 		"contao-manager-plugin": "Swinde\\Downloadarchive\\ContaoManager\\Plugin"
+	},
+	"scripts": {
+		"cs-fixer": [
+			"vendor/bin/ecs check src/ tests/ --fix --ansi"
+		]
 	}
 }
