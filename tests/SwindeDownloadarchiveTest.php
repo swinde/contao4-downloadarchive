@@ -10,17 +10,16 @@ declare(strict_types=1);
  * @license LGPL-3.0-or-later
  */
 
-namespace Swinde\Downloadarchive\Tests;
+namespace Contao\SkeletonBundle\Tests;
 
 use Swinde\Downloadarchive\SwindeDownloadarchive;
 use PHPUnit\Framework\TestCase;
-use Swinde\Downloadarchive\DownloadarchiveModel;
 
-class ContaoSkeletonBundleTest extends TestCase
+class SwindeDownloadarchiveTest extends TestCase
 {
     public function testCanBeInstantiated(): void
     {
-        $bundle = new Downloadarchive();
+        $bundle = new SwindeDownloadarchive();
 
         $this->assertInstanceOf('Swinde\Downloadarchive\SwindeDownloadarchive', $bundle);
     }
