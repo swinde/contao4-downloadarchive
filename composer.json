@@ -28,30 +28,27 @@
 		"source":"https://github.com/swinde/contao4-downloadarchive"
 	},
 	"require": {
-      "php": "^7.4|^8.1",
-		"contao/core-bundle": "~4.9"
+      	"php": "^7.4|^8.1",
+		"contao/core-bundle": "~4.9",
+		"symfony/config": "^4.4 || ^5.1",
+		"symfony/dependency-injection": "^4.4 || ^5.1",
+		"symfony/http-kernel": "^4.4 || ^5.1"
+	},
+	"conflict": {
+		"contao/manager-plugin": "<2.0 || >=3.0"
 	},
 	"require-dev": {
-        	"contao/manager-plugin": "^2.0"
+		"contao/manager-plugin": "^2.0",
+		"contao/easy-coding-standard": "^2.0",
+		"phpunit/phpunit": "^8.4",
+		"symfony/phpunit-bridge": "^4.4 || ^5.1"
 	},
-	"autoload": {
+	"autoload-dev": {
 		"psr-4": {
-			"Swinde\\Downloadarchive\\": "src/"
-		},
-		"classmap": [
-			"src/Resources/contao"
-		],
-		"exclude-from-classmap": [
-			"src/Resources/contao/config",
-			"src/Resources/contao/dca",
-			"src/Resources/contao/languages",
-			"src/Resources/contao/templates"
-		]
+			"Contao\\SkeletonBundle\\Tests\\": "tests/"
+		}
 	},
 	"extra": {
-		"contao-manager-plugin": "Swinde\\Downloadarchive\\ContaoManager\\Plugin",
-		"branch-alias": {
-			"dev-master": "2.0.x-dev"
-		}
+		"contao-manager-plugin": "Swinde\\Downloadarchive\\ContaoManager\\Plugin"
 	}
 }
