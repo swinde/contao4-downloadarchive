@@ -5,3 +5,8 @@
 # PhpUnit
 /.phpunit.result.cache
 /phpunit.xml
+
+#Phpstorm
+/.idea
+/.php_cs.cache
+/phpunit.xml.dist
