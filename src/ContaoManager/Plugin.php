@@ -1,12 +1,16 @@
 <?php
-/**
- * @copyright  Felix Pfeiffer 2018 <m.cupic@gmx.ch>
- * @author     Felix Pfeiffer
- * @package    GalleryCreatrBundle
- * @license    LGPL-3.0+
- * @see	       https://github.com/markocupic/gallery-creator-bundle
+declare(strict_types=1);
+
+/*
+ * This file is part of Contao Downloadarchive Bundle.
  *
+ * (c) Steffen Winde 2022 <inserv@winde-ganzig.de>
+ * @license GPL-3.0-or-later
+ * For the full copyright and license information,
+ * please view the LICENSE file that was distributed with this source code.
+ * @link https://github.com/swinde/contao-downloadarchive-bundle
  */
+
 namespace Swinde\Downloadarchive\ContaoManager;
 
 use Contao\CoreBundle\ContaoCoreBundle;
@@ -16,14 +20,12 @@ use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
 use Swinde\Downloadarchive\SwindeDownloadarchive;
 
 /**
- * Plugin for the Contao Manager.
- *
- * @author Felix Pfeiffer
+ * Class Plugin
  */
 class Plugin implements BundlePluginInterface
 {
     /**
-     * {@inheritdoc}
+     * @return array
      */
     public function getBundles(ParserInterface $parser)
     {
