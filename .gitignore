@@ -7,6 +7,7 @@
 /phpunit.xml
 
 #Phpstorm
-/.idea
-/.php_cs.cache
-/phpunit.xml.dist
+
+.php_cs.cache
+phpunit.xml.dist
+/.idea/

@@ -1,21 +1,20 @@
 <?php
 
-/**
- * Contao Open Source CMS
+declare(strict_types=1);
+
+/*
+ * This file is part of Hello World Bundle.
  *
- * Copyright (c) 2005-2013 Leo Feyer
- *
- * @copyright  Felix Pfeiffer 2008
- * @author     Felix Pfeiffer :: Neue Medien
- * @package    downloadarchive
- * @license    LGPL
+ * (c) Steffen Winde 2022 <inserv@winde-ganzig.de>
+ * @license GPL-3.0-or-later
+ * For the full copyright and license information,
+ * please view the LICENSE file that was distributed with this source code.
+ * @link https://github.com/swinde/contao-hello-world-bundle
  */
 
-/**
- * Load tl_content language file
- */
-$this->loadLanguageFile('tl_content');
-
+use Contao\Backend;
+use Contao\DC_Table;
+use Contao\Input;
 /**
  * Table tl_downloadarchive
  */
@@ -227,11 +226,6 @@ $GLOBALS['TL_DCA']['tl_downloadarchive'] = array
 
 /**
  * Class tl_downloadarchive
- *
- * Provide miscellaneous methods that are used by the data configuration array.
- * @copyright  2008 Felix Pfeiffer : Neue Medien
- * @author     Felix Pfeiffer <info@felixpfeiffer.com>
- * @package    Downlaodarchiv
  */
 class tl_downloadarchive extends Backend
 {

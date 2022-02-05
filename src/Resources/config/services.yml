@@ -1,14 +1,22 @@
 services:
-    _defaults:
-        autowire: true
-        autoconfigure: true
 
-    Swinde\Downloadarchive\ContentElement\DownloadarchiveContentElementController:
+    # Contao frontend module Swinde\ContaoDownloadarchiveBundle\Controller\FrontendModule\TlModuleController
+    # We used annotations for tagging the frontend module category, the frontend module type and the frontend module template
+    Swinde\Downloadarchive\Controller\FrontendModule\DownloadarchiveModuleController:
         tags:
-            -
-                name: contao.content_element
-                category: texts
-                template: ce_downloadarchive
-                method: getCustomResponse
-                renderer: esi
-                type: my_custom_type
+            - { name: container.service_subscriber }
+        public: true
+        # Since Symfony 5 the container has to be set manually
+        calls:
+            - [ setContainer, [ '@Psr\Container\ContainerInterface' ] ]
+
+    # Contao content element Swinde\ContaoDownloadarchiveBundle\Controller\ContentElement\TlContentController
+    # We used annotations for tagging the frontend element category, the frontend element type and the frontend element template
+    Swinde\Downloadarchive\Controller\ContentElement\DownloadarchiveContentController:
+        tags:
+            - { name: container.service_subscriber }
+        public: true
+        # Since Symfony 5 the container has to be set manually
+        calls:
+            - [ setContainer, [ '@Psr\Container\ContainerInterface' ] ]
+
