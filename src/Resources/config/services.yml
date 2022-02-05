@@ -1,3 +1,14 @@
 services:
     _defaults:
+        autowire: true
         autoconfigure: true
+
+    Swinde\Downloadarchive\ContentElement\DownloadarchiveContentElementController:
+        tags:
+            -
+                name: contao.content_element
+                category: texts
+                template: ce_downloadarchive
+                method: getCustomResponse
+                renderer: esi
+                type: my_custom_type
