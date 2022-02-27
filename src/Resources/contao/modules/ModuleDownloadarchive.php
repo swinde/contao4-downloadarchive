@@ -16,7 +16,6 @@
  */
 namespace Swinde\Downloadarchive;
 
-use Patchwork\Utf8;
 
 /**
  * Class ContentDownload
@@ -76,7 +75,7 @@ class ModuleDownloadarchive extends \Module
             $objTemplate = new \BackendTemplate('be_wildcard');
 
             //$objTemplate->wildcard = '### ' . utf8_strtoupper($GLOBALS['TL_LANG']['FMD']['downloadarchive'][0]) . ' - ' . implode(", ",$title) . ' ###';
-            $objTemplate->wildcard = '### ' . Utf8::strtoupper($GLOBALS['TL_LANG']['FMD']['downloadarchive'][0]) . ' ###';
+            $objTemplate->wildcard = '### ' . $GLOBALS['TL_LANG']['FMD']['downloadarchive'][0] . ' ###';
             $objTemplate->title = $this->headline;
             $objTemplate->id = $this->id;
             $objTemplate->link = $this->name;
