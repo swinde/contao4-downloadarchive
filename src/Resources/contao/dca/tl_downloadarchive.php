@@ -15,6 +15,7 @@
  * Load tl_content language file
  */
 $this->loadLanguageFile('tl_content');
+$this->loadLanguageFile('tl_downloadarchive');
 
 /**
  * Table tl_downloadarchive
@@ -411,7 +412,7 @@ class tl_downloadarchive extends Backend
 
             $objFile = new \File($file->path, true);
 
-            $title = \StringUtil::specialchars($objFile->basename);
+            $title = specialchars($objFile->basename);
 
             if($dc->activeRecord->prefix != '')
             {
@@ -454,7 +455,7 @@ class tl_downloadarchive extends Backend
                 // Check if we have to scan the subdir
                 if ($loadSubdir)
                 {
-                    echo $objFiles->path . "<br>";
+                    #echo $objFiles->path . "<br>";
                     $varSubfiles = $this->getFiles($objFiles->uuid, $loadSubdir);
 
                     if($varSubfiles)
