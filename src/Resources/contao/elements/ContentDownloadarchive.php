@@ -101,10 +101,10 @@ class ContentDownloadarchive extends \ContentElement
             {
                 $objFile = \FilesModel::findByUuid($objFiles->singleSRC);
 
-				if($objFile === null) 
-				{
-					continue;
-				}
+                if($objFile === null) 
+                {
+                    continue;
+                }
 
                 if(!file_exists(TL_ROOT . '/' . $objFile->path) || ($objFiles->guests && FE_USER_LOGGED_IN) || ($objFiles->protected == 1 && !FE_USER_LOGGED_IN && !BE_USER_LOGGED_IN))
                 {
