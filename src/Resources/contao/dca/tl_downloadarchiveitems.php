@@ -15,6 +15,7 @@
  * Load tl_content language file
  */
 $this->loadLanguageFile('tl_content');
+$this->loadLanguageFile('tl_downloadarchiveitems');
 
 /**
  * Table tl_downloadarchiveitems 
